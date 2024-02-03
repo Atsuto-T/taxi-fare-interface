@@ -198,6 +198,9 @@ const predict = () => {
         query.push(`${param}=${data[param]}`)
       })
       const querystring = query.join('&')
+
+      const taxiFareApiUrl = 'https://taxifare.lewagon.ai/predict';
+
       const url = `${taxiFareApiUrl}?${querystring}`
       fetch(url, {
         method: 'GET',
